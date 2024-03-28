@@ -6,11 +6,11 @@ const initialState = {
 	notes: [
 		{
 			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			createdOn: new Date(),
+			createdOn: new Date().toDateString(),
 		},
 		{
 			text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-			createdOn: new Date(),
+			createdOn: new Date().toDateString(),
 		},
 	],
 };
@@ -24,7 +24,7 @@ const noteSlice = createSlice({
         add:(state, action)=>{
             state.notes.push({
                 text:action.payload,
-                createdOn:new Date(),
+                createdOn:new Date().toDateString(),
             })
         },
         delete:(state, action)=>{
@@ -34,7 +34,7 @@ const noteSlice = createSlice({
 });
 
 export const noteReducer = noteSlice.reducer;
-export const actions = noteSlice.actions;
+export const noteActions = noteSlice.actions;
 export const noteSelector = (state)=> state.noteReducer.notes;
 
 // export function noteReducer(state=initialState,action){

@@ -32,7 +32,7 @@ const initialState={
     });
 
     export const todoReducer = todoSlice.reducer;
-    export const actions = todoSlice.actions;
+    export const todoActions = todoSlice.actions;
 
     //selector 
     export const todoSelector = (state)=> state.todoReducer.todos;
