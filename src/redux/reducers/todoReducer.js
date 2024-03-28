@@ -1,10 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState={
-    todos:[
-        {text:"Go to Gym at 6", completed: false},
-        {text: "Study at 8", completed: true}
-    ]
+    todos:[]
 }
 
 //creating reducer using Redux Toolkit
@@ -12,6 +9,9 @@ const initialState={
         name:'todo',
         initialState:initialState,     
         reducers:{
+            setInitialState:(state,action)=>{
+                state.todos = action.payload;
+            },
             //this is add action
            add:(state,action)=>{
                 state.todos.push({

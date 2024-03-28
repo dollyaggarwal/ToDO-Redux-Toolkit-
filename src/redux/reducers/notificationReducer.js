@@ -43,7 +43,6 @@ const notificationSlice = createSlice({
         [noteActions.add]: (state,action)=>{
             state.message = "Note is created";
         }
-   
     }
 });
 export const notificationReducer = notificationSlice.reducer;
